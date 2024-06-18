@@ -1,7 +1,7 @@
 import numpy as np
 
 class Layer_Dense:
-    def __init__(self, n_inputs: int, n_neurons: int):
+    def __init__(self, n_inputs, n_neurons):
         """
         Initialize the layer with random weights and biases
 
@@ -14,7 +14,7 @@ class Layer_Dense:
         # Initialize biases with zeros
         self.biases = np.zeros((1, n_neurons))
 
-    def forward(self, inputs: np.ndarray) -> None:
+    def forward(self, inputs):
         """
         Perform a forward pass through the layer.
 
@@ -22,3 +22,6 @@ class Layer_Dense:
             inputs  : Input data.
         """
         self.output = np.dot(inputs, self.weight) + self.biases
+        
+        
+       
